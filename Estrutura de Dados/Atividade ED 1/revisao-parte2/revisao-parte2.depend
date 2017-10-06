@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1506548445 source:d:\revisao-parte2\estoque-code.c
+	"estoque.h"
+	<stdio.h>
+
+1506545680 d:\revisao-parte2\estoque.h
+
+1506548664 source:d:\revisao-parte2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<ctype.h>
+	"estoque.h"
+	<string.h>
+
+1506731853 source:c:\users\geltec\desktop\ed\revisao-parte2\estoque-code.c
+	"estoque.h"
+	<stdio.h>
+
+1506731492 c:\users\geltec\desktop\ed\revisao-parte2\estoque.h
+
+1506731751 source:c:\users\geltec\desktop\ed\revisao-parte2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<ctype.h>
+	"estoque.h"
+	<string.h>
+
+1506827423 source:c:\users\christopher\desktop\ed\revisao-parte2\estoque-code.c
+	"estoque.h"
+	<stdio.h>
+
+1506826921 c:\users\christopher\desktop\ed\revisao-parte2\estoque.h
+
+1506827635 source:c:\users\christopher\desktop\ed\revisao-parte2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<ctype.h>
+	"estoque.h"
+	<string.h>
+
+1506827423 source:c:\users\oliverpc\desktop\ed\revisao-parte2\estoque-code.c
+	"estoque.h"
+	<stdio.h>
+
+1506826921 c:\users\oliverpc\desktop\ed\revisao-parte2\estoque.h
+
+1506829523 source:c:\users\oliverpc\desktop\ed\revisao-parte2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<ctype.h>
+	"estoque.h"
+	<string.h>
+
