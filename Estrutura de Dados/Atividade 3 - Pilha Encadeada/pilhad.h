@@ -11,3 +11,4 @@ void imprimir(tpilha p);
 int topo (tpilha p, telem *valor);
 int push(tpilha *p, telem valor);
 int pop(tpilha *p, telem *valor);
+void inverter(tpilha *p);
