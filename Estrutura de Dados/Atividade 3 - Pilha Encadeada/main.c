@@ -75,7 +75,7 @@ int main()
                 break;
             case 'v':
                 vazia(p)?printf("\n\nPilha Vazia"):printf("\n\nPilha NAO Vazia");
-                printf("\n\tdigite qualquer ecla para continuar");
+                printf("\n\tdigite qualquer tecla para continuar");
                 getch();
                 break;
             case 'r':
