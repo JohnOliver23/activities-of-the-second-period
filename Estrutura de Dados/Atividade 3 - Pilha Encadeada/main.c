@@ -30,7 +30,7 @@ int main()
         printf("(z) esvaziar pilha\n");
         printf("(c) concatenar duas pilhas\n");
         printf("(m) mudar de  pilha\n");
-        printf("(n) conversão dec/bin\n");
+        printf("(n) conversÃ£o dec/bin\n");
         printf("(p) verificar se um texto e palindromo\n");
         printf("(s) sair\n");
         printf("-------------------------------------\n");
@@ -41,7 +41,7 @@ int main()
          }while(!strchr("edtovrzcmnsp", opcao));
         switch(opcao){
             case 'e':
-                printf("Digite o valor que você deseja empilhar");
+                printf("Digite o valor que vocÃª deseja empilhar");
                 scanf("%d", &valorEmp);
                 push(&p, valorEmp);
                 break;
@@ -62,6 +62,31 @@ int main()
                 }else{
                     printf("Pilha Vazia!");
                 }
+                getch();
+                break;
+             case 'o':
+                if(!topo(p, &valortop)){
+                    printf("\n\nPilha vazia !");
+                }else{
+                    printf("\n\no valor que estar no topo e = %d  ", valortop);
+                }
+                printf("\n\tDigite qualquer tecla para continuar...");
+                getch();
+                break;
+            case 'v':
+                vazia(p)?printf("\n\nPilha Vazia"):printf("\n\nPilha NAO Vazia");
+                printf("\n\tdigite qualquer ecla para continuar");
+                getch();
+                break;
+            case 'r':
+                if(!vazia(p)){
+                inverter(&p);
+                printf("\n\nPilha invertida com Sucesso!");
+                }else{
+                    printf("\n\nPilha Vazia!");
+
+                }
+                printf("\n\tdigite qualquer tecla para continuiar...");
                 getch();
                 break;
         }///fim do switch
