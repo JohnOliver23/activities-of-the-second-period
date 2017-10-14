@@ -61,3 +61,28 @@ return 1;
 
 
 }
+
+void inverter(tpilha *p){//inverter a pilha
+tpilha temp1;
+tpilha temp2;
+int i, valor;
+
+inicializa(&temp1);
+inicializa(&temp2);
+
+ while(!vazia(*p)){
+    pop(p, &valor);
+    push(&temp1, valor);
+
+ }
+ while(!vazia(temp1)){
+    pop(&temp1, &valor);
+    push(&temp2, valor);
+ }
+ while(!vazia(temp2)){
+    pop(&temp2, &valor);
+    push(p , valor);
+ }
+
+
+}
