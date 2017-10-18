@@ -6,6 +6,7 @@
 
 int main()
 {
+    pilha clone;
     pilha p[TAM];
     int i, t, conv[50];
     int valor;///valor desempilhado do case d
@@ -13,12 +14,12 @@ int main()
     int valortopo;///variavel q guarda o valor do topo do case o
     int valoremp;///valor fornecido pelo usuario para inserir na pilha do case e
     int tampi = 0;/// variavel q guarda o tamanho da pilha do case t
-    char confirm;///variavel q serve pra ler a confirmaçõa do usuario no teste de inversao de pilha case r
+    char confirm;///variavel q serve pra ler a confirmaÃ§Ãµa do usuario no teste de inversao de pilha case r
     int indPilha = 0;///guarda o indice da pilha atual
     int indPilha2=0;///guarda a pilha atual digitada pelo usuario
-    int recebeconc;///variavel q serve pra guardar o indice da pilha q receberar os elementos da concatenação
-    int transferconc;///variavel q serve pra guardar o indice da pilha q ira transferir os elementos da concatenação
-    int decbin;///numero fornecido pelo usuario para converter em binário do case n
+    int recebeconc;///variavel q serve pra guardar o indice da pilha q receberar os elementos da concatenaÃ§Ã£o
+    int transferconc;///variavel q serve pra guardar o indice da pilha q ira transferir os elementos da concatenaÃ§Ã£o
+    int decbin;///numero fornecido pelo usuario para converter em binÃ¡rio do case n
     char texto[80], texto2[80];
     for(i=0; i<TAM; i++){
     inicializa(&p[i]);
@@ -43,7 +44,7 @@ int main()
         printf("(z) esvaziar pilha\n");
         printf("(c) concatenar duas pilhas\n");
         printf("(m) mudar de  pilha\n");
-        printf("(n) conversão dec/bin\n");
+        printf("(n) conversÃ£o dec/bin\n");
         printf("(p) verificar se um texto e palindromo\n");
         printf("(s) sair\n");
         printf("-------------------------------------\n");
@@ -185,6 +186,19 @@ int main()
                 getch();
 
 
+                break;
+             case 'b':
+                printf("\n\nDigite o indice da pilha q vc deseja clonar");
+                scanf("%d", &indPilha2);
+                if((indPilha2 <= 3) && (indPilha2 >=1)){
+                    indPilha = indPilha2-1;
+                }
+                clonar(p[indPilha], &clone);
+                printf("\nPilha clonada com Sucesso ! \n");
+                printf("\nvalor da nova pilha = ");
+                imprimir(clone);
+                printf("\n\tDigite qualquer tecla para continuar...");
+                getch();
                 break;
             case 's':
                 return 0;
