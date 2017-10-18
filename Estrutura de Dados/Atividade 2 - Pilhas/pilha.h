@@ -15,9 +15,9 @@ void imprimir( pilha p);
 int topo( pilha p, telem *valor);
 int desempilha( pilha *p, telem *valor);
 void inverter(pilha *p, int vl);///Questao q inverte valores da pilha
-void esvaziar (pilha *p);///Quest„o q esvazia a pilha
-void mudaPilha(pilha *p);///FunÁ„o muda pilha
-void concatenar(pilha *p, pilha *p2);///funÁ„o de concatenar
-void decToBin(int vl);///funÁ„o q converte numero decimal em binario
-int palindromo(int *valor, int t);///funÁ„o q verifica se uma string È palÌndroma
-
+void esvaziar (pilha *p);///Quest√£o q esvazia a pilha
+void mudaPilha(pilha *p);///Fun√ß√£o muda pilha
+void concatenar(pilha *p, pilha *p2);///fun√ß√£o de concatenar
+void decToBin(int vl);///fun√ß√£o q converte numero decimal em binario
+int palindromo(int *valor, int t);///fun√ß√£o q verifica se uma string √© pal√≠ndroma
+int clonar (pilha p, pilha *clone);
