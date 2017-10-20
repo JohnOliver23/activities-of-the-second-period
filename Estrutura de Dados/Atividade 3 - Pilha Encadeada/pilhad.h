@@ -12,3 +12,6 @@ int topo (tpilha p, telem *valor);
 int push(tpilha *p, telem valor);
 int pop(tpilha *p, telem *valor);
 void inverter(tpilha *p);
+void esvaziar(tpilha *p);
+void concatenar(tpilha *p, tpilha *p2);
+void decToBin(int value);
