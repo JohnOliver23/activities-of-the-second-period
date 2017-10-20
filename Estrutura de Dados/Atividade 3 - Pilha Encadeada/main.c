@@ -4,13 +4,21 @@
 
 int main()
 {
-    tpilha *p;
-   int indPilha = 0;///indice da pilha
+    tpilha p[3];
+   int i;
+   int indPilha = 0, indPilha2;///indice da pilha
    int valorEmp;/// valor a ser empilhado
    int valor;/// valor desempilhado
    char opcao;///opcao do q o usuario seseja realizar
    int tampi; ///tamanho da pilha
-   inicializa(&p);
+   int valortop;///variavel q recebe o valor do topo
+   char option;///serve pra guardar ocao do usuario no case esvaziar
+   char confirm;///serve pra receber do usuario a confirmação da concatenação
+   int recebeconc, transferconc;///recebem os indices da pilha na função concatenar
+   int decbin;///guarda o valor para ser convertido em binario
+   for(i=0; i<3;i++){
+    inicializa(&p[i]);
+   }
 
    for(;;){
          system("cls");
@@ -87,6 +95,50 @@ int main()
 
                 }
                 printf("\n\tdigite qualquer tecla para continuiar...");
+                getch();
+                break;
+              case 'z':
+                printf("\n\nDeseja realmente esvaziar a pilha (S/N");
+                option = tolower(getche());
+                if(option=='s'){
+                    esvaziar(&p[indPilha]);
+                    printf("\n\tPilha esvaziada com sucesso !");
+                    getch();
+                }
+
+                break;
+            case 'm':
+                printf("Digite a o indice da pilha que voce deseja mudar de (1 a 3)");
+                scanf("%d", &indPilha2);
+                if ((indPilha2>=1)||(indPilha2<=3)){
+                    indPilha = indPilha2-1;
+                }
+                break;
+            case 'c':
+                 printf("\nSelecione a pilha que recebe os novos elementos(1 a 3): \n");
+                scanf("%d",&recebeconc);
+                printf("\nSelecione a pilha que sera transferida: \n");
+                scanf("%d",&transferconc);
+                printf("\nDeseja realmente concatenar a pilha  %d para a pilha %d: (S/N): \n",transferconc,recebeconc);
+                confirm = tolower(getche());
+                if(confirm == 's'){
+                    concatenar(&p[recebeconc-1], &p[transferconc-1]);
+                    printf("\n\tPilha concatenada com Sucesso !");
+                    printf("\n\tDigite qualquer tecla para continuar...");
+                    getch();
+                }
+
+                break;
+             case 'n':
+                printf("\n\nDigite um numero inteiro natural");
+                scanf("%d", &decbin);
+                if(decbin >=0){
+                    decToBin(decbin);
+                }else{
+                    printf("\n\tnumero digitado nao eh um numero valido");
+
+                }
+                printf("\n\tDigite qualquer tecla para continuar...");
                 getch();
                 break;
         }///fim do switch
