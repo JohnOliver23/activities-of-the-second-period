@@ -86,3 +86,45 @@ inicializa(&temp2);
 
 
 }
+esvaziar (tpilha *p){//função esvaziar
+   int valor;
+while (!vazia(*p)){
+    pop(p, &valor);
+}
+
+}
+concatenar(tpilha *p, tpilha *p2){//concatenar pilha
+tpilha temp;
+int aux;
+inicializa(&temp);
+
+while(!vazia(*p2)){
+    pop(p2, &aux);
+    push(&temp, aux);
+}
+while(!vazia(temp)){
+    pop(&temp, &aux);
+    push(p, aux);
+}
+
+}
+void decToBin(int value){
+int aux, i,  tampi;
+tpilha temp;
+inicializa(&temp);
+while (value >=0 && value >=1){
+    aux = value % 2;
+    push(&temp, aux);
+    value = value /2;
+
+}
+printf("Valor transformado para binario = ");
+while(temp !=NULL){
+    printf("%d", temp->dado);
+    temp = temp->prox;
+}
+
+
+
+
+}
