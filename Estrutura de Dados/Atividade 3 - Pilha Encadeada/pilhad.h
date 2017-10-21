@@ -15,3 +15,4 @@ void inverter(tpilha *p);
 void esvaziar(tpilha *p);
 void concatenar(tpilha *p, tpilha *p2);
 void decToBin(int value);
+int clonar (tpilha p, tpilha *clone);
