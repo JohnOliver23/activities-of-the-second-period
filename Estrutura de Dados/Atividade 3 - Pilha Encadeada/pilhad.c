@@ -128,3 +128,27 @@ while(temp !=NULL){
 
 
 }
+int clonar (tpilha p, tpilha *clone){
+if(vazia(p))
+    return 0;
+
+tpilha temp;
+int aux, i;
+inicializa(&temp);
+inicializa(clone);
+while(p !=NULL){
+    aux = p->dado;
+    push(&temp, aux);
+    p = (*p).prox;
+}
+while(!vazia(temp)){
+    pop(&temp, &aux);
+    push(clone, aux);
+}
+return 1;
+
+
+
+
+
+}
