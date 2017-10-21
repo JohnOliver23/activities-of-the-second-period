@@ -5,6 +5,7 @@
 int main()
 {
     tpilha p[3];
+    tpilha clone;
    int i;
    int indPilha = 0, indPilha2;///indice da pilha
    int valorEmp;/// valor a ser empilhado
@@ -40,13 +41,14 @@ int main()
         printf("(m) mudar de  pilha\n");
         printf("(n) conversão dec/bin\n");
         printf("(p) verificar se um texto e palindromo\n");
+        printf("(b) clonar uma pilha \n");
         printf("(s) sair\n");
         printf("-------------------------------------\n");
         printf("Digite sua Opcao [ ]\b\b");
         do{
             opcao = tolower(getche());
             printf("\b");
-         }while(!strchr("edtovrzcmnsp", opcao));
+         }while(!strchr("edtovrzcmnspb", opcao));
         switch(opcao){
             case 'e':
                 printf("Digite o valor que você deseja empilhar");
@@ -141,6 +143,23 @@ int main()
                 printf("\n\tDigite qualquer tecla para continuar...");
                 getch();
                 break;
+              case 'b':
+                printf("\nDigite a o indice da pilha que voce deseja clonar de (1 a 3)");
+                scanf("%d", &indPilha2);
+                if ((indPilha2>=1)||(indPilha2<=3)){
+                    indPilha = indPilha2-1;
+                    if(!clonar (p[indPilha], &clone)){
+                        printf("\n\nPilha Vazia");
+                    }else{
+                        printf("\nPilha clonada com Sucesso !");
+                        printf("\n Valor da nova Pilha = ");
+                        imprimir(clone);
+
+
+                    }
+                    printf("\n\tDigite qualquer tecla para continuar...");
+                    getch();
+                    break;
         }///fim do switch
 
    }///fim do for
