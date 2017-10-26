@@ -14,14 +14,34 @@ function avg(students){
   return value /3
 }
 
-function min(students){
-  var min = students['0'].grade
-  for (let value of Object.keys(students)){
-    if(students[value].grade < min)
-      min = students[value].grade
+function min(students, n =1){
+   let result = []
+  //ORDENANDO ESTUDANTES
+ students.sort( function (a, b) {
+  if (a.grade > b.grade) {
+    return 1
   }
-
-  return min
+  if (a.grade < b.grade) {
+    return -1
+  }
+  // a must be equal to b
+  return 0
+      
+    })//FIM DA ORDENAÇÃO
+  
+  //GERANDO ARRAY RESULTADO
+  if(n>1){
+  for(let i = 0; i < n; i++){
+   
+    result.push(students[i].grade)
+    }
+  }else{
+    result = students[0].grade
+  }
+  
+  
+  
+  return result
 }
 
 function max(students){
