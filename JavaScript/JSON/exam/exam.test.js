@@ -7,10 +7,10 @@ describe('generating exams', () => {
   answer =   {q1: 'a', q2: 'b', q3: 'a', q4: 'c', q5: 'd'}
 
   students = [
-
-    {"student": "Sicrano", "grade": 5},
-    {"student": "Beltrano", "grade": 7},
     {"student": "Fulano", "grade": 10},
+    {"student": "Sicrano", "grade": 5},
+    {"student": "Beltrano", "grade": 7}
+
   ]
 
   test('generating exams studend1', () => {
@@ -29,17 +29,25 @@ describe('generating exams', () => {
     expect(exam.min(students)).toBe(5)
   })
 
-  
+  test('generating min grade of studants', () => {
+    expect(exam.min(students, 2)).toEqual([5, 7])
+  })
+
+
 
   test('generating max grade of studants', () => {
     expect(exam.max(students)).toBe(10)
+  })
+
+  test('generating max grade of studants', () => {
+    expect(exam.max(students, 2)).toEqual([10, 7])
   })
 
   test('generating lt grade of studants', () => {
     expect(exam.lt(students, 6)).toEqual([5])
   })
 
-  test('generating lt grade of studants', () => {
+  test('generating gt grade of studants', () => {
     expect(exam.gt(students, 6)).toEqual([7, 10])
   })
 })
