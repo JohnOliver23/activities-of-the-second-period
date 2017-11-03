@@ -1,22 +1,17 @@
 module.exports = class Cipher {
 rot(text, point){
-
-  let value =[]
-  let res = []
-  for (let key of text){
-    value.push(key.charCodeAt(key))
-  }
-  value = value.map(x => x+point)
-  for (let key of value){
-    if(key > 122){
-      let aux = key - 122
-      key = 97 + aux-1
-    }
-    res.push(String.fromCharCode(key))
-  }
-  return res.join('')
+module.exports = class Cipher {
+rot(text, point){
+  let caracteres = 'abcdefghijklmnopqrstuvwxyz'.split('')
+  let resp =''
+  const verific = ((a, b)=> a+b > 25? (a+b)-26:a+b)
+  text.toLowerCase().split('').forEach(x =>{
+    let res = caracteres.indexOf(x)
+    res = verific(res, point);
+    resp += caracteres[res]
+  })
+  return resp
 }
 }
-
 //cipher = new Cipher()
 //console.log(cipher.rot('xyz', 2))
