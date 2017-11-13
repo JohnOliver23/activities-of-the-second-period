@@ -3,24 +3,22 @@ constructor(){
   this.grades = {}
 }
 roster(){
-  return this.grades
+  return this.grades;
 }
 add(name, grade){
-  if(this.grades[grade]){
+  if(!this.grades[grade]){
+    this.grades[grade] = [name]
+  }else{
     this.grades[grade].push(name)
     this.grades[grade].sort()
-  } else {
-    this.grades[grade] = [name]
   }
 }
-grade(grade){
-  return this.grades[grade]? this.grades[grade].sort() : []
+grade(number){
+  const result = Object.keys(this.grades).filter(x => x== number).map(x => this.grades[x])
+  const verific = (x=> x? x.sort(): [])
+  let resp = verific(result[0]);
+  return resp;
 }
 
-}
 
-/*school.add('Blair',2)
-school.add('James',2)
-school.add('Paul',2)
-//let expectedDb = { 2 : [ 'Blair', 'James', 'Paul' ] }
-console.log(school.roster())*/
+}
