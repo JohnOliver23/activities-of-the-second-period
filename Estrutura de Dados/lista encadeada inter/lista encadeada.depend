@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1510672910 source:c:\users\oliverpc\desktop\listas\listas\lista encadeada\lista.c
+	"lista.h"
+	<stdlib.h>
+
+1510672884 c:\users\oliverpc\desktop\listas\listas\lista encadeada\lista.h
+
+1510673149 source:c:\users\oliverpc\desktop\listas\listas\lista encadeada\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
+1512271705 source:c:\users\christopher\desktop\lista encadeada inter\lista.c
+	"lista.h"
+	<stdlib.h>
+
+1511706173 c:\users\christopher\desktop\lista encadeada inter\lista.h
+
+1511706228 source:c:\users\christopher\desktop\lista encadeada inter\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+
